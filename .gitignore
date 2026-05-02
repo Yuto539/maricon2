@@ -22,6 +22,9 @@
 
 # misc
 .DS_Store
+
+# local-only Claude/Cursor settings (may contain secrets)
+.claude/settings.local.json
 *.pem
 
 # debug

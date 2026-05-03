@@ -7,6 +7,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    pool: 'vmForks',
     setupFiles: ['./src/test/setup.ts'],
     coverage: {
       provider: 'v8',
@@ -21,8 +22,6 @@ export default defineConfig({
       exclude: [
         'src/lib/**/*.test.ts',
         'src/test/**',
-        // Supabase client setup and implementations require a real DB connection;
-        // they are integration-tested separately, not unit-tested.
         'src/lib/supabase/**',
         'src/lib/repositories/supabase/**',
       ],
